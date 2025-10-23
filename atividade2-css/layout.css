@@ -1,0 +1,146 @@
+/* Base do corpo */
+body {
+  background-color: var(--color-neutral-light);
+  color: var(--color-neutral-dark);
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cabeçalho com fundo igual ao restante da página */
+.header {
+  width: 100%;
+  background-color: var(--color-neutral-light); /* fundo uniforme */
+  color: var(--color-neutral-dark);
+  padding: var(--spacing-4) var(--spacing-3);
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Conteúdo interno do cabeçalho */
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.header h1 {
+  font-size: var(--font-size-xl);
+  margin: 0;
+}
+
+/* Menu principal */
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-4);
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-2) 0 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #5a2a82;
+  font-weight: bold;
+  font-size: var(--font-size-md);
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--color-secondary);
+}
+
+/* Botão do menu hambúrguer */
+.menu-toggle {
+  display: none;
+  font-size: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-neutral-dark);
+  margin-top: var(--spacing-2);
+}
+
+/* Container centralizado para toda a página */
+.page-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--spacing-4);
+}
+
+/* Rodapé */
+.footer {
+  width: 100%;
+  background-color: var(--color-secondary);
+  color: white;
+  padding: var(--spacing-3);
+  text-align: center;
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-4);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Flexbox para alinhamentos internos */
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+/* Formulário centralizado */
+.form-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Campos de formulário */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="submit"],
+select {
+  width: 100%;
+  padding: var(--spacing-2);
+  border: 1px solid var(--color-neutral-dark);
+  border-radius: 6px;
+  font-size: var(--font-size-md);
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+/* Botão de envio */
+input[type="submit"] {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--color-secondary);
+}
+
+/* Imagem dentro do formulário */
+.form-container img {
+  width: 100%;
+  display: block;
+  margin: 0 auto var(--spacing-3);
+  border-radius: 8px;
+}

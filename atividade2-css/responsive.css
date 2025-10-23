@@ -1,0 +1,21 @@
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 160px;
+    left: 0;
+    width: 100%;
+    padding: var(--spacing-3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+}

@@ -1,0 +1,26 @@
+:root {
+  /* Paleta de cores em tons terrosos */
+  --color-primary: #5D4037;
+  --color-secondary: #8D6E63;
+  --color-accent: #A1887F;
+  --color-neutral-light: #F5F5F5;
+  --color-neutral-dark: #3E2723;
+  --color-success: #6D4C41;
+  --color-warning: #D7CCC8;
+  --color-error: #BF360C;
+
+  /* Tipografia hierárquica */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 28px;
+
+  /* Espaçamentos modulares */
+  --spacing-1: 8px;
+  --spacing-2: 16px;
+  --spacing-3: 24px;
+  --spacing-4: 32px;
+  --spacing-5: 48px;
+  --spacing-6: 64px;
+}
