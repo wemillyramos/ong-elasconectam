@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elas Conectam - Página Inicial</title>
+  <link rel="stylesheet" href="atividade2-css/style.css">
+</head>
+<body>
+  <a id="topo"></a>
+
+  <header class="header">
+    <div class="header-content">
+      <img src="atividade1-html/assets/img/logoelasconectam.png" alt="Logo Elas Conectam" width="150">
+      <h1>ONG Elas Conectam</h1>
+
+      <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="atividade1-html/projetos.html">Projetos</a></li>
+          <li><a href="atividade1-html/cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-container">
+    <main>
+      <section>
+        <h2>Missão</h2>
+        <p>Promover a inclusão digital e o empoderamento feminino por meio da capacitação profissional em tecnologia, conectando mulheres a oportunidades reais de crescimento e autonomia.</p>
+      </section>
+
+      <section>
+        <h2>Visão</h2>
+        <p>Ser referência nacional na formação de mulheres em áreas tecnológicas, contribuindo para um mercado mais diverso, justo e inovador.</p>
+      </section>
+
+      <section>
+        <h2>Valores</h2>
+        <ul>
+          <li>Igualdade de gênero</li>
+          <li>Inclusão social</li>
+          <li>Inovação tecnológica</li>
+          <li>Empatia</li>
+          <li>Respeito</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Histórico e Conquistas</h2>
+        <p>Desde 2022, a Elas Conectam já capacitou mais de 500 mulheres em cursos de programação, design e marketing digital. Nossos projetos impactam diretamente comunidades periféricas e promovem autonomia financeira por meio da tecnologia.</p>
+      </section>
+
+      <section>
+        <h2>Informações de Contato</h2>
+        <ul>
+          <li>Endereço: Rua da Luz, 123 – Recife, PE</li>
+          <li>E-mail: contato@elasconectam.org.br</li>
+          <li>Telefone: (81) 99999-1234</li>
+          <li>Instagram: @elasconectam</li>
+        </ul>
+      </section>
+
+      <footer class="footer">
+        <p>&copy; 2025 Elas Conectam. Desenvolvido por <strong>Wemilly Ramos</strong></p>
+      </footer>
+    </main>
+  </div>
+
+  <a href="#topo" id="voltar-topo" style="display: none;">↑ Voltar ao topo</a>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('nav ul');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
