@@ -6,6 +6,8 @@ Este projeto consiste no desenvolvimento de uma plataforma web completa para a O
 
 O sistema foi construído seguindo a metodologia **Mobile-First**, padrões de **Acessibilidade (WCAG 2.1 Nível AA)** e simula uma **SPA (Single Page Application)**, demonstrando proficiência em HTML5, CSS3 e JavaScript.
 
+**[▶️ Confira o site:)](https://wemillyramos.github.io/ong-elasconectam/)**
+
 ### Status do Projeto
 
 ![Status Concluído](https://img.shields.io/badge/Status-CONCLUÍDO-brightgreen)
