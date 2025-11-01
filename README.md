@@ -6,7 +6,8 @@ Este projeto consiste no desenvolvimento de uma plataforma web completa para a O
 
 O sistema foi construído seguindo a metodologia **Mobile-First**, padrões de **Acessibilidade (WCAG 2.1 Nível AA)** e simula uma **SPA (Single Page Application)**, demonstrando proficiência em HTML5, CSS3 e JavaScript.
 
-**[▶️ Confira o site:)](https://wemillyramos.github.io/ong-elasconectam/)**
+## 🌐 Acesse o site:
+https://wemillyramos.github.io/ong-elasconectam/
 
 ### Status do Projeto
 
@@ -34,7 +35,7 @@ O projeto utiliza uma estrutura modular para facilitar a manutenção, conforme 
 * **`atividade2-css/variables.css`**: Define o Design System (cores, espaçamentos).
 * **`atividade2-css/layout.css`**: Contém o layout geral (header, footer, etc.) e o tema.
 * **`atividade2-css/responsive.css`**: Contém todas as Media Queries e o layout Mobile-First.
-* **`atividade1-html/cadastro.html`**: Arquivo HTML que apenas redireciona para a SPA.
+* **`atividade1-html/cadastro.html`**: Arquivo HTML que redireciona para a SPA.
 
 <br>
 
