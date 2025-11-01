@@ -1,4 +1,3 @@
-/* Botões */
 .button {
   background-color: var(--color-primary);
   color: white;
@@ -8,6 +7,12 @@
   font-size: var(--font-size-md);
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+.button,
+input[type="submit"] {
+    display: block;
+    width: 100%;
 }
 
 .button:hover {
@@ -28,16 +33,70 @@
   cursor: not-allowed;
 }
 
-/* Cards */
 .card {
-  background-color: var(--color-neutral-light);
-  border: 1px solid var(--color-neutral-dark);
+  background-color: var(--bg-container); 
+  border: 1px solid var(--border-subtle); 
   padding: var(--spacing-3);
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  color: var(--text-main); 
 }
 
-/* Formulários */
+.card h2, .card ul, .card p {
+    color: var(--text-main);
+}
+.card a {
+    color: var(--text-main);
+    text-decoration: underline;
+}
+
+.card:hover {
+    transform: translateY(-3px); 
+}
+
+.contact-card {
+    background-color: var(--color-secondary); 
+    color: white; 
+    padding: var(--spacing-4);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    word-break: break-word; 
+}
+
+.contact-card h2 {
+    color: white; 
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: var(--spacing-2);
+    margin-bottom: var(--spacing-3);
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-list li {
+    padding: var(--spacing-1) 0;
+    font-size: var(--font-size-md);
+    display: flex; 
+    align-items: center;
+}
+
+.contact-list li i::before {
+    content: "🔸"; 
+    display: inline-block;
+    margin-right: var(--spacing-2);
+    font-size: var(--font-size-lg);
+    color: var(--color-accent);
+}
+
+.contact-list li .icon-map-pin::before { content: "📍"; }
+.contact-list li .icon-mail::before { content: "📧"; }
+.contact-list li .icon-phone::before { content: "📞"; }
+.contact-list li .icon-instagram::before { content: "📸"; }
+
+
 input,
 textarea,
 select {
@@ -56,10 +115,34 @@ input:focus,
 textarea:focus,
 select:focus {
   border-color: var(--color-accent);
-  outline: none;
+  outline: 1px solid var(--color-accent); 
 }
 
-/* Feedback: alertas */
+input:required:valid:not(:focus):not(:placeholder-shown) {
+  border-color: var(--color-success);
+  box-shadow: 0 0 4px rgba(109, 76, 65, 0.2);
+}
+
+input:required:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: var(--color-error);
+  box-shadow: 0 0 4px rgba(191, 54, 12, 0.5);
+}
+
+.alert-error-border {
+    border-color: var(--color-error) !important;
+    box-shadow: 0 0 4px rgba(191, 54, 12, 0.5) !important;
+}
+
+#form-feedback {
+    margin-top: var(--spacing-3);
+}
+
+#form-feedback ul {
+    list-style-type: disc;
+    padding-left: var(--spacing-4);
+    margin-top: var(--spacing-1);
+}
+
 .alert {
   padding: var(--spacing-2);
   border-radius: 4px;
@@ -82,7 +165,6 @@ select:focus {
   color: white;
 }
 
-/* Badges e tags */
 .badge {
   display: inline-block;
   background-color: var(--color-accent);
@@ -93,10 +175,10 @@ select:focus {
   margin-right: var(--spacing-1);
 }
 
-/* Imagens responsivas */
 img {
   max-width: 100%;
   height: auto;
   display: block;
   margin: 0 auto var(--spacing-3);
+  border-radius: 8px;
 }

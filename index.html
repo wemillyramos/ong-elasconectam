@@ -11,74 +11,46 @@
 
   <header class="header">
     <div class="header-content">
-      <img src="atividade1-html/assets/img/logoelasconectam.png" alt="Logo Elas Conectam" width="150">
-      <h1>ONG Elas Conectam</h1>
-
-      <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
-
+      <div class="logo-area">
+        <img src="atividade1-html/assets/img/logoelasconectam.png" alt="Logo Elas Conectam" width="150">
+        <h1>ONG Elas Conectam</h1>
+      </div>
+      
       <nav>
         <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="atividade1-html/projetos.html">Projetos</a></li>
-          <li><a href="atividade1-html/cadastro.html">Cadastro</a></li>
+          <li><a href="#" onclick="loadPage('index')">Início</a></li>
+          <li class="dropdown">
+            <a href="#" id="dropdown-toggle-desktop">Projetos ▼</a>
+            <ul class="submenu" id="dropdown-menu-desktop">
+              <li><a href="#" onclick="loadPage('projetos'); setTimeout(() => document.getElementById('mulheres-codigo').scrollIntoView(), 100);">Mulheres no Código</a></li>
+              <li><a href="#" onclick="loadPage('projetos'); setTimeout(() => document.getElementById('conectadas').scrollIntoView(), 100);">Projeto Conectadas</a></li>
+              <li><a href="#" onclick="loadPage('projetos'); setTimeout(() => document.getElementById('voluntariado').scrollIntoView(), 100);">Voluntariado</a></li>
+              <li><a href="#" onclick="loadPage('projetos'); setTimeout(() => document.getElementById('doar').scrollIntoView(), 100);">Doar</a></li>
+            </ul>
+          </li>
+          <li><a href="#" onclick="loadPage('cadastro')">Cadastro</a></li>
         </ul>
       </nav>
+      
+      <div class="header-controls"> 
+          <button id="theme-toggle" class="theme-toggle" aria-label="Alternar modo claro/escuro">
+            🌙
+          </button>
+          <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+      </div>
+      
     </div>
   </header>
 
   <div class="page-container">
-    <main>
-      <section>
-        <h2>Missão</h2>
-        <p>Promover a inclusão digital e o empoderamento feminino por meio da capacitação profissional em tecnologia, conectando mulheres a oportunidades reais de crescimento e autonomia.</p>
-      </section>
-
-      <section>
-        <h2>Visão</h2>
-        <p>Ser referência nacional na formação de mulheres em áreas tecnológicas, contribuindo para um mercado mais diverso, justo e inovador.</p>
-      </section>
-
-      <section>
-        <h2>Valores</h2>
-        <ul>
-          <li>Igualdade de gênero</li>
-          <li>Inclusão social</li>
-          <li>Inovação tecnológica</li>
-          <li>Empatia</li>
-          <li>Respeito</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Histórico e Conquistas</h2>
-        <p>Desde 2022, a Elas Conectam já capacitou mais de 500 mulheres em cursos de programação, design e marketing digital. Nossos projetos impactam diretamente comunidades periféricas e promovem autonomia financeira por meio da tecnologia.</p>
-      </section>
-
-      <section>
-        <h2>Informações de Contato</h2>
-        <ul>
-          <li>Endereço: Rua da Luz, 123 – Recife, PE</li>
-          <li>E-mail: contato@elasconectam.org.br</li>
-          <li>Telefone: (81) 99999-1234</li>
-          <li>Instagram: @elasconectam</li>
-        </ul>
-      </section>
-
-      <footer class="footer">
-        <p>&copy; 2025 Elas Conectam. Desenvolvido por <strong>Wemilly Ramos</strong></p>
-      </footer>
-    </main>
+    <div id="dynamic-content">
+        </div>
   </div>
 
-  <a href="#topo" id="voltar-topo" style="display: none;">↑ Voltar ao topo</a>
+  <footer class="footer">
+    <p>&copy; 2025 Elas Conectam. Todos os direitos reservados.</p>
+  </footer>
 
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('nav ul');
-
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
-  </script>
+  <script src="atividade3-js/main.js"></script> 
 </body>
 </html>

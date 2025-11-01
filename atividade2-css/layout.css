@@ -1,77 +1,169 @@
-/* Base do corpo */
 body {
-  background-color: var(--color-neutral-light);
-  color: var(--color-neutral-dark);
+  background-color: var(--bg-page);
+  color: var(--text-main);
   font-family: 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
-/* Cabeçalho com fundo igual ao restante da página */
 .header {
   width: 100%;
-  background-color: var(--color-neutral-light); /* fundo uniforme */
-  color: var(--color-neutral-dark);
-  padding: var(--spacing-4) var(--spacing-3);
+  background-color: var(--bg-header);
+  color: var(--text-header);
+  padding: 0;
   text-align: center;
-  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  position: relative;
 }
 
-/* Conteúdo interno do cabeçalho */
 .header-content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--spacing-2);
+  flex-direction: row; 
+  justify-content: space-between; 
+  align-items: center; 
+  gap: var(--spacing-3);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-1) var(--spacing-4);
+}
+
+.logo-area {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    gap: var(--spacing-2);
+    background-color: transparent;
+    padding: 0;
+    width: auto;
+    color: var(--text-header);
 }
 
 .header h1 {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg); 
+  margin: 0;
+  color: var(--text-header);
+}
+
+.header-content img {
+    filter: brightness(1.5); 
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    margin-left: auto;
+}
+
+nav {
+    width: auto;
+    background-color: transparent;
+    padding: 0;
+    margin-left: auto; 
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end; 
+  gap: var(--spacing-3);
+  list-style: none;
+  padding: 0;
   margin: 0;
 }
 
-/* Menu principal */
-nav ul {
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-4);
-  list-style: none;
-  padding: 0;
-  margin: var(--spacing-2) 0 0;
+nav ul li {
+    position: relative;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #5a2a82;
-  font-weight: bold;
+  background-color: var(--color-primary); 
+  color: white; 
+  padding: var(--spacing-1) var(--spacing-2); 
+  border-radius: 4px;
+  
+  font-weight: normal; 
   font-size: var(--font-size-md);
-  transition: color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: var(--color-secondary);
+  background-color: var(--color-accent);
+  color: white;
 }
 
-/* Botão do menu hambúrguer */
+.submenu {
+    display: none !important; 
+    
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    min-width: 250px;
+    background-color: var(--color-neutral-dark); 
+    border: 1px solid var(--border-subtle); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: var(--spacing-2) 0;
+    margin: 0;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-1);
+    text-align: center;
+}
+
+.submenu.active-dropdown {
+    display: grid !important; 
+}
+
+
+.submenu li {
+    grid-column: span 1;
+    width: auto;
+}
+
+.submenu li a {
+    background: none; 
+    color: white; 
+    padding: var(--spacing-1) var(--spacing-2);
+    font-weight: normal;
+    font-size: var(--font-size-sm);
+    white-space: nowrap;
+    border-radius: 0;
+}
+
+.submenu li a:hover {
+    background-color: var(--color-secondary); 
+    color: white;
+}
+
 .menu-toggle {
   display: none;
   font-size: 32px;
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--color-neutral-dark);
-  margin-top: var(--spacing-2);
+  color: var(--text-header);
 }
 
-/* Container centralizado para toda a página */
+.theme-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    font-size: var(--font-size-lg);
+    cursor: pointer;
+    color: var(--text-header);
+}
+
+
 .page-container {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0 auto; 
   padding: var(--spacing-4);
 }
 
-/* Rodapé */
 .footer {
   width: 100%;
   background-color: var(--color-secondary);
@@ -83,7 +175,6 @@ nav ul li a:hover {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Flexbox para alinhamentos internos */
 .flex-row {
   display: flex;
   justify-content: space-between;
@@ -97,18 +188,30 @@ nav ul li a:hover {
   gap: var(--spacing-2);
 }
 
-/* Formulário centralizado */
 .form-container {
   width: 100%;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0 auto; 
   padding: 40px;
-  background-color: white;
+  background-color: var(--bg-container); 
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Campos de formulário */
+fieldset {
+  border: 1px solid var(--color-accent);
+  padding: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+  border-radius: 8px;
+}
+
+legend {
+  font-size: var(--font-size-lg);
+  color: var(--color-primary);
+  font-weight: bold;
+  padding: 0 var(--spacing-2);
+}
+
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -117,27 +220,28 @@ input[type="submit"],
 select {
   width: 100%;
   padding: var(--spacing-2);
-  border: 1px solid var(--color-neutral-dark);
+  border: 1px solid var(--border-subtle);
   border-radius: 6px;
   font-size: var(--font-size-md);
-  background-color: #fff;
+  background-color: var(--bg-container); 
+  color: var(--text-main); 
   box-sizing: border-box;
+  margin-bottom: var(--spacing-2);
 }
 
-/* Botão de envio */
 input[type="submit"] {
   background-color: var(--color-primary);
   color: white;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: var(--spacing-4);
 }
 
 input[type="submit"]:hover {
   background-color: var(--color-secondary);
 }
 
-/* Imagem dentro do formulário */
 .form-container img {
   width: 100%;
   display: block;

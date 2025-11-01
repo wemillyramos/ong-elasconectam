@@ -1,5 +1,4 @@
 :root {
-  /* Paleta de cores em tons terrosos */
   --color-primary: #5D4037;
   --color-secondary: #8D6E63;
   --color-accent: #A1887F;
@@ -9,18 +8,37 @@
   --color-warning: #D7CCC8;
   --color-error: #BF360C;
 
-  /* Tipografia hierárquica */
   --font-size-xs: 12px;
   --font-size-sm: 14px;
   --font-size-md: 16px;
   --font-size-lg: 20px;
   --font-size-xl: 28px;
 
-  /* Espaçamentos modulares */
   --spacing-1: 8px;
   --spacing-2: 16px;
   --spacing-3: 24px;
   --spacing-4: 32px;
   --spacing-5: 48px;
   --spacing-6: 64px;
+
+  --bg-page: var(--color-neutral-light); 
+  --bg-container: white; 
+  --text-main: var(--color-neutral-dark); 
+  --border-subtle: #ddd; 
+  --bg-header: var(--color-neutral-dark); 
+  --text-header: white; 
+}
+
+[data-theme='dark'] {
+  --bg-page: #1a1a1a; 
+  --bg-container: #2c2c2c; 
+  --text-main: var(--color-neutral-light); 
+  --border-subtle: #555; 
+  
+  --bg-header: var(--color-primary); 
+  --text-header: white;
+  
+  --color-success: #8BC34A; 
+  --color-warning: #FFEB3B; 
+  --color-error: #FF5722; 
 }
